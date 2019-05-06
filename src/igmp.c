@@ -124,8 +124,8 @@ void acceptIgmp(int recvlen) {
     /* filter local multicast 239.255.255.250 */
     if (dst == htonl(0xEFFFFFFA))
     {
-        my_log(LOG_NOTICE, 0, "The IGMP message was local multicast. Ignoring.");
-        return;
+        my_log(LOG_NOTICE, 0, "The IGMP message was local multicast.");
+        // return;
     }
 
     /*
